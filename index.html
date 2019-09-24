@@ -3,10 +3,28 @@
   <head>
   <title>Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .imagetable td{
+      border: 2px solid black;
+      padding: 50px;
+    }
+  
+    .imagetable img{
+      width: 250px;
+      height: 250px;
+    }
+    
+    .header{
+      font-family: Impact;
+      font-size: 40px;
+    }
+  </style>
+  
   </head>
   <body>
     <ul class="navbar">
       <li class = "active"><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li class = "dropdown">
         <div>Projects</div>
@@ -17,6 +35,18 @@
         </ul>
       </li>
     </ul>
-    <h1>Home</h1>
+    <h1 class = "header">Noah Clark - Welcome</h1>
+    <table class = "imagetable">
+      <tr>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      </tr>
+      <tr>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      <td><img src = "https://www.gormankelly.com.au/wp-content/uploads/2019/03/Placeholder-Team-Image.jpg"></td>
+      </tr>
+    </table>
   </body>
 </html>
