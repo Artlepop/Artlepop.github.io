@@ -4,25 +4,21 @@
       overflow: hidden;
       padding: 0;
     }
-    
+
     .navbar a, .dropdown div{
       text-decoration: none;
       color: white;
       font-size: 24px;
       padding: 16px;
       display: inline-block;
-    } 
-    
+    }
+
     .navbar li{
       float: left;
     }
 
     .navbar li:hover{
       background-color: purple;
-    }
-    
-    a:Hover, div:Hover{
-        color: black;
     }
 
     .dropdown-content{
@@ -41,7 +37,7 @@
     .dropdown:hover .dropdown-content{
       display: block;
     }
-    
+
     .active
     {
       background-color: purple;
