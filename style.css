@@ -71,6 +71,6 @@
 
     body{
       animation-name: example;
-      animation-duration: 20s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
     }
