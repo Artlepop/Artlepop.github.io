@@ -63,6 +63,12 @@
         100% {background-color: red;}
     }
 
+    .hubblelink{
+          color: black;
+          background-color: lightblue;
+          border: 2px solid black;
+    }
+
     body{
       animation-name: example;
       animation-duration: 20s;
