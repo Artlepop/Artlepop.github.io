@@ -63,12 +63,20 @@
         100% {background-color: red;}
     }
 
-    @keyframes flip {
-        0%   {transform: rotate(0deg);}
-        25%   {transform: rotate(90deg);}
-        50%   {transform: rotate(180deg);}
-        75%   {transform: rotate(270deg);}
-        100%   {transform: rotate(360deg);}
+    @keyframes imganim {
+        0%   {transform: translate(0, 0);}
+        25%  {transform: translate(0, 0);}
+        26%  {transform: translate(1px, 1px);}
+        27%  {transform: translate(-5px, -2px);}
+        28%  {transform: translate(5px, 5px);}
+        29%  {transform: translate(-1px, 1px);}
+        30%  {transform: translate(0px, 0px);}
+    }
+
+    .imagetable img, .active{
+      animation-name: imganim;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
     }
 
     .hubblelink{
