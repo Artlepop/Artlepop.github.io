@@ -21,12 +21,17 @@
       background-color: purple;
     }
 
+    #bar:hover{
+      animation-name: hoveranim;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
     .dropdown-content{
       list-style: none;
       padding: 0;
       display: none;
       position: absolute;
-      z-index: 1;
     }
 
     .dropdown-content li{
@@ -45,6 +50,7 @@
 
     h1{
         font-family: Impact;
+        font-size: 30px;
     }
 
     @keyframes example {
@@ -71,6 +77,14 @@
         28%  {transform: translate(5px, 5px);}
         29%  {transform: translate(-1px, 1px);}
         30%  {transform: translate(0px, 0px);}
+    }
+
+    @keyframes hoveranim{
+        1%  {transform: translate(1px, 1px);}
+        2%  {transform: translate(-5px, -2px);}
+        3%  {transform: translate(5px, 5px);}
+        4%  {transform: translate(-1px, 1px);}
+        5%  {transform: translate(0px, 0px);}
     }
 
     .imagetable img, .active{
