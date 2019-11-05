@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Project 1</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+        #container{
+            position: absolute;
+            top: 100px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: green;
+        }
+
+        #leftpane{
+            width: 56%;
+            height: 100%;
+            float: left;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+        }
+
+        #rightpane{
+            width: 44%;
+            height: 100%;
+            float: left;
+            background-color: blue;
+        }
+  </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li id = "bar"><a href="index.html">Home</a></li>
+      <li id = "bar"><a href="aboutme.html">About Me</a></li>
+      <li id = "bar"><a href="resume.html">Resume</a></li>
+      <li class = "dropdown">
+        <div id = "bar">Projects</div>
+        <ul class="dropdown-content">
+          <li class = "active" id = "bar"><a href="textadventure.html">Text Adventure</a></li>
+          <li id = "bar"><a href="project2.html">Project 2</a></li>
+          <li id = "bar"><a href="project3.html">Project 3</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div id = "container">
+        <div id = "leftpane">
+
+        </div>
+
+        <div id = "rightpane">
+
+        </div>
+    </div>
+  </body>
+</html>
