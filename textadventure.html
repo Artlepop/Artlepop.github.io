@@ -89,7 +89,7 @@
 
     <div id = "container">
         <div id = "leftpane">
-            <img id = "storyimg" src = "images/cartoonsatan.jpg">
+            <img id = "storyimg" src = "images/hosroom.jpg">
         </div>
 
         <div id = "rightpane">
@@ -124,16 +124,16 @@
         var b3 = document.getElementById("b3");
         var b4 = document.getElementById("b4");
         var state = "intro";
-        intro();
+        Intro();
 
-        function intro(){
-            pic.src = "images/cartoonsatan.jpg";
-            pText1.innerHTML = "Intro to story";
+        function Intro(){
+            pic.src = "images/hosroom.jpg";
+            pText1.innerHTML = "You wake up in a bed. As you look around you notice that your in a hospital, but somethings off...";
             pText2.innerHTML = "";
             pText3.innerHTML = "";
             pText4.innerHTML = "";
-            b1.innerHTML = "Yes";
-            b2.innerHTML = "No";
+            b1.innerHTML = "Look Around";
+            b2.innerHTML = "Go back to bed";
             b3.innerHTML = "";
             b4.innerHTML = "";
             b1.style.display = "block";
@@ -142,36 +142,131 @@
             b4.style.display = "none";
         }
 
-        function meetBlob(){
-            pic.src = "images/blob.png";
-            pText1.innerHTML = "Hello, I am blob";
-            pText2.innerHTML = "What would you like to do?";
-            pText3.innerHTML = "";
-            pText4.innerHTML = "";
-            b1.innerHTML = "Talk to blob";
-            b2.innerHTML = "Don't talk to blob";
-            b3.innerHTML = "Run away";
-            b4.innerHTML = "";
-            b1.style.display = "block";
-            b2.style.display = "block";
-            b3.style.display = "block";
-            b4.style.display = "none";
-        }
-
-        function talkToBlob(){
-            pic.src = "images/angryblob.png";
-            pText1.innerHTML = "Don't talk to me!";
+        function GoBackToBed(){
+            pic.src = "images/devil.png";
+            pText1.innerHTML = "You fall back to sleep and recieve the ultimate wrath of Lucifer himself...";
             pText2.innerHTML = "";
             pText3.innerHTML = "";
             pText4.innerHTML = "";
-            b1.innerHTML = "Try and calm the Blob down";
-            b2.innerHTML = "Hug the Blob";
-            b3.innerHTML = "Run away from the Blob";
-            b4.innerHTML = "Talk to the Blob again";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function LookAround(){
+            pic.src = "images/anohosroom.jpg";
+            pText1.innerHTML = "The room is darkly lit with a bed, many monitors, and a faint beeping sound in the back...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Peer out window";
+            b2.innerHTML = "Look over shoulder";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
             b1.style.display = "block";
             b2.style.display = "block";
-            b3.style.display = "block";
-            b4.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function PeerOutWindow(){
+            pic.src = "images/windowlookout.jpeg";
+            pText1.innerHTML = "You open the curtains to look out and see that you are about 15 stories up, the city is deserted, cars are crashed, and nobody in sight...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Look over shoulder";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+        function LookOverShoulder(){
+            pic.src = "images/hosfiles.jpg";
+            pText1.innerHTML = "You look over your shoulder to find a desk with a document on top. You pick it up and read; Patient #421, Project L.R";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Exit the room";
+            b2.innerHTML = "Flip through the papers";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function ExitTheRoom(){
+            pic.src = "images/hoshall.jpg";
+            pText1.innerHTML = "You make your way to the door and peer out into the hallway. There's a broken light in the distance flickering off and on. You slowly start walking when you hear a loud metal clash, its origin seems too close for comfort";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Turn around";
+            b2.innerHTML = "Keep walking";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function FlipThroughThePapers(){
+            pic.src = "images/hosfiles.jpg";
+            pText1.innerHTML = "You quickly flip through the papers; the last page reading 'Cure unsuccessful, patient has fallen into a comma.' You think to yourself 'Cure for what?'";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Exit the room";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function TurnAround(){
+            pic.src = "images/otherhoshall.jpg";
+            pText1.innerHTML = "You turn around toward the other end of the corridor, but nothing is there, just open doors. By the looks of things it is safe to say that this hospital hasn't been in use for a long time. You resume walking and instantly stop dead in your tracks, a goopy black creature is directly in front of you...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Talk to the creature";
+            b2.innerHTML = "Scream";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function KeepWalking(){
+            pic.src = "images/hoshall.jpg";
+            pText1.innerHTML = "You keep walking, but this time with more speed and agility. Your almost at the lobby, you can see the elevator. You start to run, but you feel a hand grab your shoulder and freeze. It feels weird, like it is made of slime, it can't be human...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Dash for the elevator";
+            b2.innerHTML = "Scream";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
         }
 
         //state machine
@@ -179,24 +274,66 @@
         {
             if(state == "intro"){
                 if(button == 1){
-                    meetBlob();
-                    state = "meetBlob"
+                    LookAround();
+                    state = "lookaround";
                 }
                 else if(button == 2){
-                    //Send them somewhere else
+                    GoBackToBed();
+                    state = "GoBackToBed"
                 }
             }
-            else if(state == "meetBlob")
+            else if(state == "GoBackToBed")
             {
                 if(button == 1){
-                    talkToBlob();
-                    state = "talkToBlob";
+                    Intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "lookaround")
+            {
+                if(button == 1){
+                    PeerOutWindow();
+                    state = "peeroutwindow";
                 }
                 else if(button == 2){
-
+                    LookOverShoulder();
+                    state = "lookovershoulder";
                 }
-                else if(button == 3){
-
+            }
+            else if(state == "peeroutwindow")
+            {
+                if(button == 1){
+                    LookOverShoulder();
+                    state = "lookovershoulder";
+                }
+            }
+            else if(state == "lookovershoulder")
+            {
+                if(button == 1){
+                    ExitTheRoom();
+                    state = "exittheroom";
+                }
+                else if(button == 2){
+                    FlipThroughThePapers();
+                    state = "flipthroughthepapers";
+                }
+            }
+            else if(state == "flipthroughthepapers")
+            {
+                if(button == 1){
+                    ExitTheRoom();
+                    state = "exittheroom";
+                }
+            }
+            else if(state == "exittheroom")
+            {
+                if(button == 1){
+                    TurnAround();
+                    state = "turnaround"
+                }
+                else if(button == 2){
+                    KeepWalking();
+                    state = "keepwalking"
                 }
             }
 
