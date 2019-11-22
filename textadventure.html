@@ -351,7 +351,23 @@
 
         function KeepTalkingWithTheCreature(){
             pic.src = "images/abcity.jpg";
-            pText1.innerHTML = "You continue talking to the creature and develope a friendship. You can't understand the creature, but you enjoy talking to it. You exit the hospital and begin your life in the apocolypse with your new friend";
+            pText1.innerHTML = "You continue talking to the creature and develope a friendship. You can't understand the creature, but you enjoy talking to it. You exit the hospital and begin your life in the apocolypse with your new friend...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function DashForTheElevator(){
+            pic.src = "images/elevator.jpg";
+            pText1.innerHTML = "You try and dash for the elevator, but it is no use. You feel a sharp pain in your back. You look down and see that a sharp object has impaled you. You fall to the floor and slowly lose consciousness...";
             pText2.innerHTML = "";
             pText3.innerHTML = "";
             pText4.innerHTML = "";
@@ -486,15 +502,21 @@
                     state = "intro";
                 }
             }
-            else if(state == "askitaboutthehospital")
+            else if(state == "keepwalking")
             {
                 if(button == 1){
-                    ResumeWalking();
-                    state = "resumewalking";
+                    DashForTheElevator();
+                    state = "dashfortheelevator";
                 }
                 else if(button == 2){
-                    KeepTalkingWithTheCreature();
-                    state = "keeptalkingwiththecreature";
+
+                }
+            }
+            else if(state == "dashfortheelevator")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
                 }
             }
 
