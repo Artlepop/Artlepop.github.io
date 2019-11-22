@@ -381,6 +381,54 @@
             b4.style.display = "none";
         }
 
+        function OtherScream(){
+            pic.src = "images/elevator.jpg";
+            pText1.innerHTML = "You feel the hand jolt back. You stay in place for a few minutes longer in terror...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Keep walking toward the elevator";
+            b2.innerHTML = "Turn around";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function KeepWalkingTowardTheElevator(){
+            pic.src = "images/wasted.png";
+            pText1.innerHTML = "You get in the elevator. You press for the first floor; your whole body drops. It feels like your going 100 miles per second. The elevator hits the floor and your body is crushed instantly...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function OtherTurnAround(){
+            pic.src = "images/monster.png";
+            pText1.innerHTML = "You turn around and a monster is right in front of you. It roars, picks you up, and yeets you into the elevator. The elevator snaps and falls to the first floor. You die from the impact...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
         //state machine
         function bclick(button)
         {
@@ -477,6 +525,17 @@
                     state = "askitaboutthehospital";
                 }
             }
+            else if(state == "askitaboutthehospital")
+            {
+                if(button == 1){
+                    ResumeWalking();
+                    state = "resumewalking";
+                }
+                else if(button == 2){
+                    KeepTalkingWithTheCreature();
+                    state = "keeptalkingwiththecreature";
+                }
+            }
             else if(state == "askforitsname")
             {
                 if(button == 1){
@@ -509,10 +568,36 @@
                     state = "dashfortheelevator";
                 }
                 else if(button == 2){
-
+                    OtherScream();
+                    state = "otherscream";
                 }
             }
             else if(state == "dashfortheelevator")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "otherscream")
+            {
+                if(button == 1){
+                    KeepWalkingTowardTheElevator();
+                    state = "keepwalkingtowardtheelevator";
+                }
+                else if(button == 2){
+                    OtherTurnAround();
+                    state = "otherturnaround";
+                }
+            }
+            else if(state == "keepwalkingtowardtheelevator")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "otherturnaround")
             {
                 if(button == 1){
                     Intro();
