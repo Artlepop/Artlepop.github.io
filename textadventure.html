@@ -238,8 +238,8 @@
         }
 
         function TurnAround(){
-            pic.src = "images/otherhoshall.jpg";
-            pText1.innerHTML = "You turn around toward the other end of the corridor, but nothing is there, just open doors. By the looks of things it is safe to say that this hospital hasn't been in use for a long time. You resume walking and instantly stop dead in your tracks, a goopy black creature is directly in front of you...";
+            pic.src = "images/happyblob.png";
+            pText1.innerHTML = "You turn around toward the other end of the corridor, but nothing is there, just open doors. By the looks of things it is safe to say that this hospital hasn't been in use for a long time. You resume walking and instantly stop dead in your tracks, a goopy orange creature is directly in front of you...";
             pText2.innerHTML = "";
             pText3.innerHTML = "";
             pText4.innerHTML = "";
@@ -265,6 +265,102 @@
             b4.innerHTML = "";
             b1.style.display = "block";
             b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function TalkToTheCreature(){
+            pic.src = "images/anohapblob.jpg";
+            pText1.innerHTML = "You say hi and it replies with a gurgle. You think it's happy, maybe it wants a friend...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Ask for its name";
+            b2.innerHTML = "Ask it about the hospital";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function Scream(){
+            pic.src = "images/wasted.png";
+            pText1.innerHTML = "The creature is enraged and grows to ten times its size. It then proceeds to devour you whole. You die of suffocation...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function AskForItsName(){
+            pic.src = "images/puzzledblob.png";
+            pText1.innerHTML = "Its mouth opens, but only a croaking sound can be heard. It continues to make strange noises and flaping its arms in a happy gesture. You don't think it knows english...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Resume walking";
+            b2.innerHTML = "Keep talking with the creature";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function AskItAboutTheHospital(){
+            pic.src = "images/puzzledblob.png";
+            pText1.innerHTML = "It tilts its head in confusion and then proceeds to hop around in delight. You can tell its happy...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Resume walking";
+            b2.innerHTML = "Keep talking with the creature";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function ResumeWalking(){
+            pic.src = "images/abcity.jpg";
+            pText1.innerHTML = "You continue walking and pass the creature. You can hear it following you. You make your way out of the hospital and begin your new life in the apocolypse. You don't know who you were, but your going to find out...";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function KeepTalkingWithTheCreature(){
+            pic.src = "images/abcity.jpg";
+            pText1.innerHTML = "You continue talking to the creature and develope a friendship. You can't understand the creature, but you enjoy talking to it. You exit the hospital and begin your life in the apocolypse with your new friend";
+            pText2.innerHTML = "";
+            pText3.innerHTML = "";
+            pText4.innerHTML = "";
+            b1.innerHTML = "Restart";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
             b3.style.display = "none";
             b4.style.display = "none";
         }
@@ -329,11 +425,65 @@
             {
                 if(button == 1){
                     TurnAround();
-                    state = "turnaround"
+                    state = "turnaround";
                 }
                 else if(button == 2){
                     KeepWalking();
-                    state = "keepwalking"
+                    state = "keepwalking";
+                }
+            }
+            else if(state == "turnaround")
+            {
+                if(button == 1){
+                    TalkToTheCreature();
+                    state = "talktothecreature";
+                }
+                else if(button == 2){
+                    Scream();
+                    state = "scream";
+                }
+            }
+            else if(state == "scream")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "talktothecreature")
+            {
+                if(button == 1){
+                    AskForItsName();
+                    state = "askforitsname";
+                }
+                else if(button == 2){
+                    AskItAboutTheHospital();
+                    state = "askitaboutthehospital";
+                }
+            }
+            else if(state == "askforitsname")
+            {
+                if(button == 1){
+                    ResumeWalking();
+                    state = "resumewalking";
+                }
+                else if(button == 2){
+                    KeepTalkingWithTheCreature();
+                    state = "keeptalkingwiththecreature";
+                }
+            }
+            else if(state == "resumewalking")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "keeptalkingwiththecreature")
+            {
+                if(button == 1){
+                    Intro();
+                    state = "intro";
                 }
             }
 
